@@ -10,7 +10,17 @@ async function toggleTodo(id: string, complete: boolean) {
   'use server'
   await prisma.todo.update({ where: { id }, data: { complete } })
 }
+async function handleDelete(id: string) {
+  'use server'
 
+  await prisma.todo.delete({ where: { id } })
+}
+
+async function handleEdit(id: string, task: string) {
+  'use server'
+
+  await prisma.todo.update({ where: { id }, data: { task } })
+}
 const Home = async () => {
   const todos = await fetchTodos()
 
@@ -22,7 +32,13 @@ const Home = async () => {
       </Link>
       <ul>
         {todos.map((todo) => (
-          <Todo key={todo.id} {...todo} toggleTodo={toggleTodo} />
+          <Todo
+            key={todo.id}
+            {...todo}
+            toggleTodo={toggleTodo}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+          />
         ))}
       </ul>
     </div>
