@@ -26,7 +26,7 @@ const Todo = ({
   const router = useRouter()
 
   return (
-    <li>
+    <li className="flex justify-between">
       <input
         id={id}
         type="checkbox"
