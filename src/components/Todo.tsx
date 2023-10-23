@@ -26,11 +26,11 @@ const Todo = ({
   const router = useRouter()
 
   return (
-    <li className="flex justify-between">
+    <li className="flex justify-between mb-4 items-center">
       <input
         id={id}
         type="checkbox"
-        className="cursor-pointer peer"
+        className="cursor-pointer peer mr-1"
         defaultChecked={complete}
         onChange={(e) => toggleTodo(id, e.target.checked)}
       />
@@ -66,7 +66,7 @@ const Todo = ({
           </label>
 
           <button
-            className="border border-black ml-3 text-red-400"
+            className="border border-black ml-3 text-red-400 p-1"
             onClick={() => {
               handleDelete(id)
 
