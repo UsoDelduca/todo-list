@@ -16,8 +16,14 @@ async function handleSubmit(data: FormData) {
 const New = () => {
   return (
     <div className="flex flex-col items-center">
+      <h1 className="flex flex-col pt-2">Add new Todo</h1>
       <form action={handleSubmit} className="mt-12 flex flex-col gap-4">
-        <input type="text" name="task" className="border-2" />
+        <input
+          type="text"
+          name="task"
+          className="border-2"
+          placeholder="type your new todo here"
+        />
         <Link
           href="/"
           className="border-2 border-black text-center text-red-400"
