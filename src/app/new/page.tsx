@@ -18,7 +18,10 @@ const New = () => {
     <div className="flex flex-col items-center">
       <form action={handleSubmit} className="mt-12 flex flex-col gap-4">
         <input type="text" name="task" className="border-2" />
-        <Link href="/" className="border-2 border-black text-center">
+        <Link
+          href="/"
+          className="border-2 border-black text-center text-red-400"
+        >
           Cancel
         </Link>
         <button type="submit" className="border-2 border-black">

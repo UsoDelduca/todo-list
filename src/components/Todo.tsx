@@ -26,7 +26,7 @@ const Todo = ({
   const router = useRouter()
 
   return (
-    <li>
+    <li className="flex justify-between mb-4 items-center">
       <input
         id={id}
         type="checkbox"
@@ -66,7 +66,7 @@ const Todo = ({
           </label>
 
           <button
-            className="border border-black ml-3 text-red-400"
+            className="border border-black ml-3 text-red-400 p-1"
             onClick={() => {
               handleDelete(id)
 
