@@ -30,7 +30,7 @@ const Todo = ({
       <input
         id={id}
         type="checkbox"
-        className="cursor-pointer peer"
+        className="cursor-pointer peer rounded"
         defaultChecked={complete}
         onChange={(e) => toggleTodo(id, e.target.checked)}
       />
